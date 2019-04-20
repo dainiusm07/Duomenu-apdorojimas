@@ -1,7 +1,7 @@
 # Duomenu apdorojimas
 # Kaip paleisti:
-+ Susikompiliuoti naudojant makefile t.y parasius komanda "make run" i komandine eilute.
-+ Paleisti programa. (defaultinis pavadinimas - test)
++ Susikompiliuoti naudojant makefile t.y parasius komanda `make run` i komandine eilute. (Veikia tik su mac ir unix OS)
++ Paleisti programa parasius komanda `./test`.
 # v0.1
 + Visu duomenu ivedimas ir skaiciavimas, studentu sk - neribotas, duomenis vedami iki tol kol vartotojas nusprendzia sustoti, su pazymiais viskas taip pat.
 + Prideta papildoma funkcija (jei vartotojas tarkim varda ir pavarde paraso taip - vARDenis PAVARDEnis. Programa issaugos - Vardenis Pavardenis)
@@ -33,6 +33,13 @@ Viskas buvo matuojama naudojant 100000 studentu. Strategija tokia - sukuriami 2 
 |   **Deque** |   1.3219 sec. | 0.0468746 sec. | 
 |   **List** |   1.26558 sec. | 0.0625055 sec. | 
 # v1
-+ Programa padaryta pagal 2 strategija.
-+ Pateikti 3 jos variantai.
-+ Pamatytas zenklus skirtumas tarp vector,deque ir list. Vector pasirodė prasčiausiai, deque kiek geriau, o list greitesnis uz juos apie 20 kartu.
++ Programa padaryta pagal 3 strategijas.
++ Pateikti 3 jos variantai su 3 skirtingais konteineriais.
+
+|   Konteineris   |   1 Strategija   |    2 Strategija     |    3 Strategija     |
+|-----:|-----:|-----:|-----:|
+|   **Vector** |  0.0468736 sec. | 178.082 sec. | 0.0312524 sec. | 
+|   **Deque** |  0.0468746 sec. | 90.0643 sec. | 0.0468746 sec. | 
+|   **List** |   0.0625055 sec. | 0.0312511 sec. | - | 
+
+Naudojamas studentu skaicius - 100000. Naudojant 1 strategija (kurioje neefektyviai naudojama atmintis) Vector ir Deque konteineriai pasirode geriau. Taciau pritaikius 2 strategija kurioje atmintis naudojama zymiai efektyviau t.y trinant nereikalingus duomenis rusiuojant Vector pasirode blogiausiai, Deque ta darba atliko praktiskai 2x greciau! O List visai apie 6000x greiciau! Panaudojus 3 strategija (naudojant stable_partition) Vector konteineris pasirode ne ka blogiau nei List. (Pabandziau ir Deque su stable_partition, rezultatas pasidare taip pat zymiai geresnis, taciau ne toks geras kaip su Vector ar List.
