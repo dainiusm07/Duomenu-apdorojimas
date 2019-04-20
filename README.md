@@ -32,7 +32,7 @@ Viskas buvo matuojama naudojant 100000 studentu. Strategija tokia - sukuriami 2 
 |   **Vector** |   1.28993 sec. | 0.0468736 sec. | 
 |   **Deque** |   1.3219 sec. | 0.0468746 sec. | 
 |   **List** |   1.26558 sec. | 0.0625055 sec. | 
-# v1
+# v1.0
 + Programa padaryta pagal 3 strategijas.
 + Pateikti 3 jos variantai su 3 skirtingais konteineriais.
 
